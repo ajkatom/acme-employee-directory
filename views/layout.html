@@ -11,12 +11,14 @@
           <h1>{{ title }}</h1>
           <h3>the amount of employees we have {{employeesCount}} and they have {{nickCount}} nicknames</h3>
      <nav>
+     
       <ul class="nav nav-pills">
         <a class="nav-item nav-link {% if path==='/' %} active {% endif %}" href='/'>Home</a> <span class="sr-only"></span></a>
         <a class="nav-item nav-link {% if path==='/employees' %} active {% endif %}" href='/employees'>employees</a><span></span></a>
       </ul>
           
      </nav>
+     </br>
       {%block content%}
       {%endblock%}
       

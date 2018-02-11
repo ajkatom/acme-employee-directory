@@ -3,18 +3,10 @@
 *  Created On : Sun Feb 11 2018
 *  File : error.html
 ******************************************* -->
+{% extends "views/layout.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block content %}
+    <h1> the error is {{err}}</h1>
+    <a>please return to the home page</a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Author">
-    <title>#[[$Title$]]#</title>
-</head>
-
-<body>
-    #[[$END$]]#
-</body>
-
-</html>
+{% endblock %}
