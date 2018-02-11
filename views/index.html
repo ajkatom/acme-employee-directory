@@ -1,0 +1,20 @@
+<!-- ******************************************
+*  Author : Author   
+*  Created On : Sun Feb 11 2018
+*  File : index.html
+******************************************* -->
+{% extends "./layout.html" %}
+
+{% block content %}
+    
+
+<form action = '/employees' method='POST' >
+    <div>
+        <input name ='firstName' value='' placeholder = 'first name'/>
+        <input name = 'lastName' value='' placeholder = 'last name'/>
+        <input name = 'nickName' value='' placeholder = 'nickname'/>
+        
+        <button>submit</button>
+    <div>
+      </form>
+      {%endblock%}

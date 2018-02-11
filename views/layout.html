@@ -1,0 +1,25 @@
+<html>
+  <head>
+        <title>{{ title }}</title>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+  </head>
+  <body>
+  
+   <div class='container'>
+          <h1>{{ title }}</h1>
+          <h3>the amount of employees we have {{employeesCount}} and they have {{nickCount}} nicknames</h3>
+     <nav>
+      <ul class="nav nav-pills">
+        <a class="nav-item nav-link {% if path==='/' %} active {% endif %}" href='/'>Home</a> <span class="sr-only"></span></a>
+        <a class="nav-item nav-link {% if path==='/employees' %} active {% endif %}" href='/employees'>employees</a><span></span></a>
+      </ul>
+          
+     </nav>
+      {%block content%}
+      {%endblock%}
+      
+  </div>
+  </body>
+</html>

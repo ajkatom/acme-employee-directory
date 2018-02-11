@@ -1,0 +1,19 @@
+<!-- ******************************************
+*  Author : Author   
+*  Created On : Sun Feb 11 2018
+*  File : employee.html
+******************************************* -->
+{% extends "./layout.html" %}
+  
+  {% block content %}
+  <h2> {{employee.Fullname}}</h2>
+  <h3>the person's nick names are: {{employee.nickName}}</h3>
+  <form method = 'POST' action = '/employees/{{employee.id}}?_method=PATCH'>
+        <input name='firstName' value ={{employee.firstName}} />
+        <input name='lastName' value = {{employee.lastName}}  />
+        <input name='nickName' value = {{employee.nickName}} />
+
+
+        <button> update </button>
+    </form>
+ {% endblock %}

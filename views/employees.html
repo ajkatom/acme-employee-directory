@@ -1,0 +1,45 @@
+<!-- ******************************************
+*  Author : Author   
+*  Created On : Sun Feb 11 2018
+*  File : employees.html
+******************************************* -->
+{% extends "./layout.html" %}
+<head>
+   
+    <title>employees</title>
+
+</head>
+
+<body>
+  {% block content %}
+
+<form action = '/employees' method='POST' >
+    <div>
+        <input name ='firstName' value='' placeholder = 'first name'/>
+        <input name ='lastName'  value='' placeholder = 'last name'/>
+        <input name ='nickName' value='' placeholder = 'nickname'/>
+        
+        
+        <button>submit</button>
+    <div>
+      </form>
+   <ul>
+   {% for employee in employees%}
+   <li>
+    <a href='/employees/{{employee.id}}'>
+       {{employee.Fullname}}
+    <form method = 'POST' action = '/employees/{{employee.id}}?_method=DELETE'>
+    <button>DELETE</button>
+    </form>
+    </a>
+   {% endfor %}
+   </li>
+   </ul>
+
+    
+</ul>   
+  {% endblock %}
+
+</body>
+
+</html>
